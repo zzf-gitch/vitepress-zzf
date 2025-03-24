@@ -12,7 +12,7 @@ lastUpdated: true
 hero:
     name: 阿飞同学
     text: If you like to be free, you have to taste loneliness.
-    tagline: 前端工程师/后端开发/运维工程师
+    tagline: 前端工程师/后端开发/运维工程师1
     image:
         src: /avatar.png
         alt: avatar
