@@ -26,7 +26,7 @@ hero:
 features:
   - icon: 🤹‍♀️
     title: Web前端
-    details: 牢大程序员，国内某互联网厂搬砖。
+    details: Code程序员，国内某互联网搬砖。
     link: /column/views/guide
   - icon: 👩‍🎨‍
     title: 喜欢旅游

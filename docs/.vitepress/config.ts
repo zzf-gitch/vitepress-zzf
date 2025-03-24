@@ -11,7 +11,7 @@ export default defineConfig({
       'link',
       {
         rel: 'icon',
-        href: '/avatar.ico'
+        href: 'avatar.ico'
       }
     ]
   ],
