@@ -20,6 +20,9 @@ hero:
       text: 王者荣耀后台管理系统
       link: https://zzf-gitch.github.io/wzry/
     - theme: alt
+      text: 前端卡片特效
+      link: https://zzf-gitch.github.io/Front-end-effects/
+    - theme: alt
       text: 鹏语言
       link: https://www.blik.wang/
 ---

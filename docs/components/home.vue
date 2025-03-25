@@ -1,4 +1,5 @@
 <template>
+  <h1 class="img"><span class="clip">王者荣耀后台管理系统截图</span></h1>
   <div class="home-wrapper">
     <div class="home-item" v-for="item in Images">
       <img :src="item.url" style="height:200px" @click="details(item)"/>
@@ -43,6 +44,23 @@ const release = () => {
 </script>
 
 <style scoped>
+.img{
+  letter-spacing: -0.4px;
+  line-height: 40px;
+  font-size: 32px;
+  font-weight: 700;
+  white-space: pre-wrap;
+  display:flex;
+  justify-content: center;
+}
+
+.clip{
+  background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .home-wrapper {
   display: flex;
   justify-content: center;
