@@ -19,7 +19,7 @@
 ### 2025 - 跨端开发，把前端的技术栈扩展到了Electron。
 ![呼叫中心](/2025.png)
 <VideoPlayer :videoSrc="'/video/2025-video1.mp4'" />
-简单的写了一个图书管理Demo，简单示例。
+一个图书管理Electron的简单示例Demo。
 
 ---
 
