@@ -6,6 +6,16 @@ export default defineConfig({
   base: '/vitepress-zzf/',
   title: 'Flyingzzf',
   description: 'A VitePress Site',
+  vite: {
+    optimizeDeps: {
+      include: [
+        'video.js/core',
+        'video.js/tech/html5',
+        'video.js/dist/video-js.css',
+        'vue-easy-lightbox'  // 添加这一行
+      ]
+    }
+  },
   head: [
     [
       'link',

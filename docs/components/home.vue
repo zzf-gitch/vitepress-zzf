@@ -1,45 +1,47 @@
 <template>
   <h1 class="img"><span class="clip">王者荣耀后台管理系统截图</span></h1>
   <div class="home-wrapper">
-    <div class="home-item" v-for="item in Images">
-      <img :src="item.url" style="height:200px" @click="details(item)"/>
+    <div class="home-item" v-for="(item, index) in Images" :key="index">
+      <img :src="item.src" :alt="item.title" @click="showImg(index)"/>
     </div>
   </div>
 
-  <div class="Rimg" v-if="RgShow">
-    <div class="r-img">
-      <img :src="FIMG" alt="">
-    </div>
-    <button @click="release" type="button" class="CLOSE">关闭</button>
-  </div>
+  <vue-easy-lightbox
+      :visible="visible"
+      :imgs="Images"
+      :index="index"
+      @hide="handleHide"
+    ></vue-easy-lightbox>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import zhuye1 from '/主页1.jpg'
-import zhuye2 from '/主页2.jpg'
-import zhuye3 from '/主页3.jpg'
+import VueEasyLightbox from 'vue-easy-lightbox'
 
+const visible = ref(false)
+const index = ref(0)
 const Images = ref([
   {
-    url: zhuye1
+    src: '/主页1.jpg',
+    title: '王者荣耀登录页'
   },
   {
-    url: zhuye2
+    src: '/主页2.jpg',
+    title: '王者荣耀英雄页'
   },
   {
-    url: zhuye3
+    src: '/主页3.jpg',
+    title: '王者荣耀后台英雄详情页'
   }
 ])
 
-const FIMG = ref('')
-const RgShow = ref(false)
-const details = (item) => {
-  FIMG.value = item.url
-  RgShow.value = true
+const showImg = (i) => {
+  index.value = i
+  visible.value = true
 }
-const release = () => {
-  RgShow.value = false
+
+const handleHide = () => {
+  visible.value = false
 }
 </script>
 
@@ -72,49 +74,19 @@ const release = () => {
   font-weight: bolder;
   display: inline-block;
   cursor: pointer;
-  border-radius: 2px;
   line-height: 13px;
   font-size: 13px;
-  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
-  transition: all 0.5s;
-}
-.Rimg{
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transition: transform 0.3s;
 }
 
-.r-img{
-  width: 90%;
-  height: 80%;
+.home-item:hover {
+  transform: scale(1.2);
 }
 
-.r-img img{
+.home-item img {
   width: 100%;
-  height: 100%;
-}
-
-.CLOSE{
-  position: fixed;
-  right: 30px;
-  top: 30px;
-  background: #f56c6c;
-  color: white;
-  border: none;
-  padding: 4px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.CLOSE:hover {
-  background: #f89898;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 </style>

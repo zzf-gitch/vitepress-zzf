@@ -21,5 +21,9 @@
         "@algolia/client-search"
       ]
     }
+  },
+  "dependencies": {
+    "video.js": "^7.21.7",
+    "vue-easy-lightbox": "^1.19.0"
   }
 }
