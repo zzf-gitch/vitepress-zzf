@@ -76,7 +76,7 @@ const handleHide = () => {
     visible.value = false
 }
 
-// 处理图片路径
+// 处理图片路径 解决打包后404问题
 const processedImages = computed(() => {
     return images.value.map(img => ({
         ...img,

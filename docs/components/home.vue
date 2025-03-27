@@ -1,22 +1,23 @@
 <template>
   <h1 class="img"><span class="clip">王者荣耀后台管理系统截图</span></h1>
   <div class="home-wrapper">
-    <div class="home-item" v-for="(item, index) in Images" :key="index">
+    <div class="home-item" v-for="(item, index) in processedImages" :key="index">
       <img :src="item.src" :alt="item.title" @click="showImg(index)"/>
     </div>
   </div>
 
   <vue-easy-lightbox
       :visible="visible"
-      :imgs="Images"
+      :imgs="processedImages"
       :index="index"
       @hide="handleHide"
     ></vue-easy-lightbox>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref , computed } from 'vue'
 import VueEasyLightbox from 'vue-easy-lightbox'
+import { withBase } from 'vitepress'
 
 const visible = ref(false)
 const index = ref(0)
@@ -43,6 +44,14 @@ const showImg = (i) => {
 const handleHide = () => {
   visible.value = false
 }
+
+// 处理图片路径 解决打包后404问题
+const processedImages = computed(() => {
+  return Images.value.map(img => ({
+      ...img,
+      src: withBase(img.src)
+  }))
+})
 </script>
 
 <style scoped>
