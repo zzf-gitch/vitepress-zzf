@@ -2,27 +2,27 @@ import { DefaultTheme } from 'vitepress';
 export const sidebar: DefaultTheme.Sidebar = {
   '/column/Algorithm/': [
     {
-      text: '栈和队列',
+      text: 'vue转electron桌面端应用',
       items: [
         {
-          text: '栈-深拷贝和浅拷贝',
+          text: '开发中',
           link: '/column/Algorithm/001_Stack'
         },
         {
-          text: '队列-事件循环',
+          text: '开发中',
           link: '/column/Algorithm/002_Queue'
         }
       ]
     },
     {
-      text: '字典和树',
+      text: '开发中2',
       items: [
         {
-          text: '字典和集合-Set和Map',
+          text: '开发中',
           link: '/column/Algorithm/003_Dictionary'
         },
         {
-          text: '树-深/广度优先遍历',
+          text: '开发中',
           link: '/column/Algorithm/004_Tree'
         }
       ]
