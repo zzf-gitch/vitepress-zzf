@@ -3,7 +3,7 @@ import { sidebar, nav } from './relaConf';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/',
+  base: '/vitepress-zzf/',
   title: 'Flyingzzf',
   description: 'A VitePress Site',
   vite: {
