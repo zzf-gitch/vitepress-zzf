@@ -4,7 +4,7 @@ import { sidebar, nav } from './relaConf';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   // 网站部署的基础路径 部署在cloudflare上的时候是base:'/',如果部署在github上，就是base:'/vitepress-zzf/'
-  base: '/',
+  base: '/vitepress-zzf/',
   title: 'Flyingzzf',
   description: 'A VitePress Site',
   vite: {
