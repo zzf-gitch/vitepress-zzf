@@ -21,7 +21,8 @@
 <VideoPlayer :videoSrc="'/video/2025-video1.mp4'" />
 一个图书管理Electron的简单示例Demo。
 
----
+## 🖼️ 童年的影子，长成了并肩的模样
+<ImageHz />
 
 ## 🖼️ 往事回忆画廊
 <!-- 这里放置图片画廊 -->

@@ -55,7 +55,7 @@ const images = ref([
     },
     {
         src: '/images/ly10.jpg',
-        title: '合照'
+        title: '小二'
     },
     {
         src: '/images/ly11.jpg',
