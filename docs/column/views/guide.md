@@ -24,7 +24,7 @@ hero:
       link: https://zzf-gitch.github.io/Front-end-effects/
     - theme: alt
       text: 鹏语言
-      link: https://www.blik.wang/
+      link: https://www.blik.asia/
 ---
 
 <!-- 自定义组件 -->

@@ -34,7 +34,7 @@ export const nav: DefaultTheme.NavItem[] = [
   {
     text: '关于我',
     items: [
-      { text: 'Github', link: 'https://github.com/zzf-gitch' },
+      { text: 'Github', link: 'https://github.com/zzf-gitch/vitepress-zzf/tree/master' },
     ]
   }
 ];
